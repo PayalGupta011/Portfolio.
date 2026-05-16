@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, useLocation } from "react-router-dom";
+import { Menu, X } from 'lucide-react';
 
 function Navbar() {
   const location = useLocation();
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const links = [
     { to: "/", label: "Home" },
@@ -17,12 +19,13 @@ function Navbar() {
       {/* Logo */}
       <Link 
         to="/"
+        onClick={() => setIsMobileMenuOpen(false)}
         className="text-xl sm:text-2xl font-extrabold text-slate-800 tracking-tight"
       >
         Payal <span className="text-blue-500">Gupta.</span>
       </Link>
 
-      {/* Nav Links */}
+      {/* Nav Links Desktop */}
       <nav className="hidden md:flex items-center gap-8">
         {links.map((link) => {
           // Exact match for Home (/), startsWith for others
@@ -49,12 +52,41 @@ function Navbar() {
         </Link>
       </nav>
 
-      {/* Mobile hamburger placeholder */}
-      <div className="md:hidden flex flex-col gap-1.5 cursor-pointer">
-        <span className="w-6 h-0.5 bg-slate-700 rounded-full block"></span>
-        <span className="w-6 h-0.5 bg-slate-700 rounded-full block"></span>
-        <span className="w-4 h-0.5 bg-slate-700 rounded-full block"></span>
-      </div>
+      {/* Mobile hamburger */}
+      <button 
+        className="md:hidden text-slate-700 hover:text-blue-500 transition-colors"
+        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+      >
+        {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+      </button>
+
+      {/* Mobile Menu Dropdown */}
+      {isMobileMenuOpen && (
+        <div className="absolute top-full left-0 w-full bg-white/95 backdrop-blur-xl border-b border-gray-100 shadow-lg py-4 px-6 flex flex-col gap-4 md:hidden animate-in slide-in-from-top-2 duration-200">
+          {links.map((link) => {
+            const isActive = link.to === "/" ? location.pathname === "/" : location.pathname.startsWith(link.to);
+            return (
+              <Link
+                key={link.to}
+                to={link.to}
+                onClick={() => setIsMobileMenuOpen(false)}
+                className={`text-base font-semibold py-2 border-b border-gray-50 transition-colors duration-300 ${
+                  isActive ? "text-blue-500" : "text-slate-600 hover:text-blue-500"
+                }`}
+              >
+                {link.label}
+              </Link>
+            );
+          })}
+          <Link
+            to="/contact"
+            onClick={() => setIsMobileMenuOpen(false)}
+            className="bg-blue-500 text-white text-center text-sm px-6 py-3 rounded-lg font-bold mt-2 shadow-md"
+          >
+            Hire Me
+          </Link>
+        </div>
+      )}
     </header>
   );
 }

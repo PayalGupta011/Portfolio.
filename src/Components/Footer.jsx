@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaGithub, FaLinkedin, FaTwitter, FaInstagram, FaEnvelope, FaWhatsapp, FaCode, FaMapMarkerAlt, FaPhoneAlt, FaArrowUp, FaRocket, FaHeart } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaYoutube, FaInstagram, FaEnvelope, FaWhatsapp, FaCode, FaMapMarkerAlt, FaPhoneAlt, FaArrowUp, FaRocket, FaHeart } from 'react-icons/fa';
 
 function Footer() {
   const currentYear = new Date().getFullYear();
@@ -38,8 +38,8 @@ function Footer() {
               <a href="https://www.linkedin.com/in/payal-gupta-452642367/" target="_blank" rel="noreferrer" className="w-9 h-9 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:bg-blue-500 hover:text-white transition-all border border-slate-700">
                 <FaLinkedin size={16} />
               </a>
-              <a href="https://twitter.com" target="_blank" rel="noreferrer" className="w-9 h-9 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:bg-blue-500 hover:text-white transition-all border border-slate-700">
-                <FaTwitter size={16} />
+              <a href="https://www.youtube.com/@logicverse-i2c" target="_blank" rel="noreferrer" className="w-9 h-9 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:bg-red-500 hover:text-white transition-all border border-slate-700">
+                <FaYoutube size={16} />
               </a>
               <a href="https://www.instagram.com/payalgupta___21/" target="_blank" rel="noreferrer" className="w-9 h-9 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:bg-blue-500 hover:text-white transition-all border border-slate-700">
                 <FaInstagram size={16} />
