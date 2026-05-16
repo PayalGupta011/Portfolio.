@@ -1,0 +1,62 @@
+import React from 'react';
+import { Link, useLocation } from "react-router-dom";
+
+function Navbar() {
+  const location = useLocation();
+
+  const links = [
+    { to: "/", label: "Home" },
+    { to: "/about", label: "About" },
+    { to: "/skills", label: "Skills" },
+    { to: "/projects", label: "Projects" },
+    { to: "/contact", label: "Contact" },
+  ];
+
+  return (
+    <header className="w-full px-6 sm:px-10 py-4 flex justify-between items-center bg-white/90 backdrop-blur-md border-b border-gray-100 shadow-sm sticky top-0 z-50">
+      {/* Logo */}
+      <Link 
+        to="/"
+        className="text-xl sm:text-2xl font-extrabold text-slate-800 tracking-tight"
+      >
+        Payal <span className="text-blue-500">Gupta.</span>
+      </Link>
+
+      {/* Nav Links */}
+      <nav className="hidden md:flex items-center gap-8">
+        {links.map((link) => {
+          // Exact match for Home (/), startsWith for others
+          const isActive = link.to === "/" ? location.pathname === "/" : location.pathname.startsWith(link.to);
+          
+          return (
+            <Link
+              key={link.to}
+              to={link.to}
+              className={`text-sm font-semibold relative group py-1 transition-colors duration-300 ${
+                isActive ? "text-blue-500" : "text-slate-500 hover:text-blue-500"
+              }`}
+            >
+              {link.label}
+              <span className={`absolute -bottom-1 left-0 h-[2.5px] bg-blue-500 rounded-full transition-all duration-300 ${isActive ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
+            </Link>
+          );
+        })}
+        <Link
+          to="/contact"
+          className="bg-blue-500 hover:bg-blue-600 text-white text-sm px-6 py-2.5 rounded-lg font-bold transition-all shadow-md shadow-blue-500/20 active:scale-95"
+        >
+          Hire Me
+        </Link>
+      </nav>
+
+      {/* Mobile hamburger placeholder */}
+      <div className="md:hidden flex flex-col gap-1.5 cursor-pointer">
+        <span className="w-6 h-0.5 bg-slate-700 rounded-full block"></span>
+        <span className="w-6 h-0.5 bg-slate-700 rounded-full block"></span>
+        <span className="w-4 h-0.5 bg-slate-700 rounded-full block"></span>
+      </div>
+    </header>
+  );
+}
+
+export default Navbar;
