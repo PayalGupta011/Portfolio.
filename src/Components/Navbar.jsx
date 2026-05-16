@@ -62,7 +62,7 @@ function Navbar() {
 
       {/* Mobile Menu Dropdown */}
       {isMobileMenuOpen && (
-        <div className="absolute top-full left-0 w-full bg-white/95 backdrop-blur-xl border-b border-gray-100 shadow-lg py-4 px-6 flex flex-col gap-4 md:hidden animate-in slide-in-from-top-2 duration-200">
+        <div className="absolute top-full right-4 sm:right-10 mt-2 w-56 bg-white/95 backdrop-blur-xl border border-gray-100 rounded-2xl shadow-xl py-4 px-5 flex flex-col gap-2 md:hidden animate-in slide-in-from-top-2 duration-200 origin-top-right">
           {links.map((link) => {
             const isActive = link.to === "/" ? location.pathname === "/" : location.pathname.startsWith(link.to);
             return (
@@ -70,21 +70,23 @@ function Navbar() {
                 key={link.to}
                 to={link.to}
                 onClick={() => setIsMobileMenuOpen(false)}
-                className={`text-base font-semibold py-2 border-b border-gray-50 transition-colors duration-300 ${
-                  isActive ? "text-blue-500" : "text-slate-600 hover:text-blue-500"
+                className={`text-sm font-semibold py-2.5 px-3 rounded-lg transition-colors duration-300 ${
+                  isActive ? "bg-blue-50 text-blue-500" : "text-slate-600 hover:bg-slate-50 hover:text-blue-500"
                 }`}
               >
                 {link.label}
               </Link>
             );
           })}
-          <Link
-            to="/contact"
-            onClick={() => setIsMobileMenuOpen(false)}
-            className="bg-blue-500 text-white text-center text-sm px-6 py-3 rounded-lg font-bold mt-2 shadow-md"
-          >
-            Hire Me
-          </Link>
+          <div className="pt-2 mt-1 border-t border-gray-100">
+            <Link
+              to="/contact"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="bg-blue-500 hover:bg-blue-600 transition-colors text-white text-center text-sm px-6 py-2.5 rounded-lg font-bold shadow-md block w-full"
+            >
+              Hire Me
+            </Link>
+          </div>
         </div>
       )}
     </header>
