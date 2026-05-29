@@ -31,12 +31,12 @@ function Services() {
 
       <div className="max-w-[1200px] mx-auto relative z-10">
         
-        <div className="text-center mb-16">
+        <div className="text-center mb-10 sm:mb-16">
           <span className="text-blue-500 font-bold text-sm bg-blue-50 px-3 py-1 rounded-full">Services</span>
-          <h2 className="text-4xl md:text-5xl font-extrabold text-slate-800 mt-4 mb-4">
+          <h2 className="text-2xl sm:text-4xl md:text-5xl font-extrabold text-slate-800 mt-4 mb-4">
             Solutions I <span className="text-blue-500">Provide</span>
           </h2>
-          <p className="text-slate-500 text-lg max-w-2xl mx-auto">
+          <p className="text-slate-500 text-sm sm:text-lg max-w-2xl mx-auto">
             High-quality services to help businesses grow, scale and succeed in the digital world.
           </p>
         </div>
@@ -67,7 +67,7 @@ function Services() {
         </div>
 
         {/* Bottom Banner */}
-        <div className="bg-white border border-gray-100 rounded-3xl p-8 shadow-sm flex flex-col md:flex-row items-center gap-8 lg:gap-16 justify-between">
+        <div className="bg-white border border-gray-100 rounded-3xl p-6 sm:p-8 shadow-sm flex flex-col md:flex-row items-center gap-6 lg:gap-16 justify-between">
           
           <div className="flex items-start gap-4 max-w-xs">
             <div className="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center text-blue-500 flex-shrink-0 shadow-inner">

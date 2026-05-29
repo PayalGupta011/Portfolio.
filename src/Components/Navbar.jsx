@@ -20,9 +20,15 @@ function Navbar() {
       <Link 
         to="/"
         onClick={() => setIsMobileMenuOpen(false)}
-        className="text-xl sm:text-2xl font-extrabold text-slate-800 tracking-tight"
+        className="group"
       >
-        Payal <span className="text-blue-500">Gupta.</span>
+        <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-full overflow-hidden border-[3px] border-blue-200 shadow-[0_2px_12px_rgba(59,130,246,0.3)] group-hover:scale-110 group-hover:border-blue-400 group-hover:shadow-[0_4px_20px_rgba(59,130,246,0.4)] transition-all duration-300 bg-blue-50">
+          <img 
+            src="/payal.png" 
+            alt="Payal Gupta" 
+            className="w-full h-full object-cover object-top"
+          />
+        </div>
       </Link>
 
       {/* Nav Links Desktop */}

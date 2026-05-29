@@ -54,12 +54,12 @@ function Blog() {
       <div className="max-w-[1200px] mx-auto relative z-10">
         
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-10 sm:mb-16">
           <span className="text-blue-500 font-bold text-sm bg-blue-50 px-3 py-1 rounded-full">My Blog</span>
-          <h2 className="text-4xl md:text-5xl font-extrabold text-slate-800 mt-4 mb-4">
+          <h2 className="text-2xl sm:text-4xl md:text-5xl font-extrabold text-slate-800 mt-4 mb-4">
             Insights & <span className="text-blue-500">Knowledge</span>
           </h2>
-          <p className="text-slate-500 text-lg max-w-2xl mx-auto">
+          <p className="text-slate-500 text-sm sm:text-lg max-w-2xl mx-auto">
             Sharing knowledge, solving problems and helping developers grow.
           </p>
         </div>

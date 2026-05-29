@@ -3,7 +3,7 @@ import { Code2, Briefcase, Target, BookOpen, Rocket, Users, Megaphone, MonitorPl
 
 function About() {
   return (
-    <div className="min-h-[calc(100vh-65px)] bg-[#F0F5FF] flex items-center justify-center p-4 sm:p-8 relative overflow-hidden">
+    <div className="min-h-screen bg-[#F0F5FF] flex items-center justify-center px-4 py-10 sm:p-8 relative overflow-hidden">
       {/* Background blur blobs */}
       <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-blue-300 rounded-full mix-blend-multiply filter blur-[100px] opacity-40"></div>
       <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-blue-300 rounded-full mix-blend-multiply filter blur-[100px] opacity-40"></div>
@@ -32,11 +32,11 @@ function About() {
         <div className="flex-1 flex flex-col lg:flex-row items-center gap-12 z-10">
 
           {/* Left Content */}
-          <div className="flex-1 max-w-xl">
-            <h1 className="text-4xl md:text-5xl font-bold text-slate-800 mb-2 leading-tight">
+          <div className="flex-1 max-w-xl text-center lg:text-left">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-slate-800 mb-2 leading-tight">
               My Story. My Drive.
             </h1>
-            <h2 className="text-4xl md:text-5xl font-bold text-blue-500 mb-2">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-blue-500 mb-2">
               My Vision.
             </h2>
             <div className="w-12 h-1 bg-blue-500 rounded-full mb-6"></div>
@@ -98,8 +98,8 @@ function About() {
           </div>
 
           {/* Right Image + Stats */}
-          <div className="flex-1 flex flex-col items-center justify-center gap-16 relative">
-            <div className="relative w-64 h-64 md:w-72 md:h-72">
+          <div className="flex-1 flex flex-col items-center justify-center gap-12 sm:gap-16 relative">
+            <div className="relative w-48 h-48 sm:w-60 sm:h-60 md:w-72 md:h-72">
               {/* Circle bg */}
               <div className="w-full h-full rounded-full bg-blue-100 overflow-hidden border-[6px] border-white shadow-[0_10px_40px_rgba(59,130,246,0.3)] transition-transform duration-500 hover:scale-105 relative z-10 cursor-pointer">
                 <img

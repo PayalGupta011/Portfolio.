@@ -39,19 +39,19 @@ function CaseStudies() {
 
       <div className="max-w-[1200px] mx-auto relative z-10">
         
-        <div className="text-center mb-16">
+        <div className="text-center mb-10 sm:mb-16">
           <span className="text-blue-500 font-bold text-sm bg-blue-50 px-3 py-1 rounded-full">Case Studies</span>
-          <h2 className="text-4xl md:text-5xl font-extrabold text-slate-800 mt-4 mb-4">
+          <h2 className="text-2xl sm:text-4xl md:text-5xl font-extrabold text-slate-800 mt-4 mb-4">
             Projects <span className="text-blue-500">Case Studies</span>
           </h2>
-          <p className="text-slate-500 text-lg max-w-2xl mx-auto">
+          <p className="text-slate-500 text-sm sm:text-lg max-w-2xl mx-auto">
             Real problems. Thoughtful solutions. Impact that matters.
           </p>
         </div>
 
         <div className="flex flex-col gap-12">
           {caseStudies.map((study, index) => (
-            <div key={index} className="bg-white border border-gray-100 rounded-[40px] p-8 shadow-sm flex flex-col lg:flex-row gap-8 lg:gap-12">
+            <div key={index} className="bg-white border border-gray-100 rounded-[30px] sm:rounded-[40px] p-5 sm:p-8 shadow-sm flex flex-col lg:flex-row gap-6 lg:gap-12">
               
               {/* Left Image / UI Mockup */}
               <div className="w-full lg:w-[40%] rounded-3xl bg-blue-50/50 border border-blue-100 flex items-center justify-center min-h-[300px] overflow-hidden p-6">

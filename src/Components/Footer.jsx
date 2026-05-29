@@ -16,10 +16,10 @@ function Footer() {
 
       <div className="max-w-[1200px] mx-auto relative z-10 border border-slate-800 rounded-3xl p-8 sm:p-12 bg-slate-900/50 backdrop-blur-xl shadow-2xl">
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-6 border-b border-slate-800 pb-12">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 lg:gap-6 border-b border-slate-800 pb-12">
           
-          {/* Column 1: Brand & Info (Spans 2 columns on lg screens optionally, but let's make it 1.5x wider if possible. We'll use col-span-1 lg:col-span-2) */}
-          <div className="lg:col-span-2 pr-0 lg:pr-8">
+          {/* Column 1: Brand & Info */}
+          <div className="lg:col-span-2 col-span-2 pr-0 lg:pr-8">
             <div className="flex items-center gap-3 mb-2">
               <FaCode size={28} className="text-blue-500" />
               <div>

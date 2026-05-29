@@ -92,8 +92,8 @@ function Skills() {
 
         {/* Page Title */}
         <div className="text-center mb-8 z-10">
-          <h1 className="text-4xl md:text-5xl font-bold text-slate-800 mb-3">
-            Skills &amp; <span className="text-blue-500">Technologies</span>
+          <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold text-slate-800 mb-3">
+            Skills & <span className="text-blue-500">Technologies</span>
           </h1>
           <div className="w-16 h-1 bg-blue-500 rounded-full mx-auto mb-4"></div>
           <p className="text-slate-400 text-sm">Technologies I use to build scalable, modern and efficient applications.</p>

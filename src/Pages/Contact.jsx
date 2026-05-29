@@ -12,22 +12,22 @@ function Contact() {
       <div className="max-w-[1200px] mx-auto relative z-10">
         
         {/* Header */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-8 sm:mb-12">
           <span className="text-blue-500 font-bold text-sm bg-blue-50 px-3 py-1 rounded-full flex items-center justify-center w-fit mx-auto gap-2">
             <Send size={14} className="text-blue-500" /> Get In Touch
           </span>
-          <h2 className="text-4xl md:text-5xl font-extrabold text-slate-800 mt-4 mb-4">
+          <h2 className="text-2xl sm:text-4xl md:text-5xl font-extrabold text-slate-800 mt-4 mb-4">
             Let's Build Something<br />
             Amazing <span className="text-blue-500">Together</span>
           </h2>
-          <p className="text-slate-500 text-lg max-w-2xl mx-auto">
-            Have a project in mind or want to collaborate?<br/>I'd love to hear from you!
+          <p className="text-slate-500 text-sm sm:text-lg max-w-2xl mx-auto">
+            Have a project in mind or want to collaborate? I'd love to hear from you!
           </p>
         </div>
 
         {/* Main Card */}
-        <div className="bg-white rounded-[40px] shadow-xl shadow-blue-50/50 p-6 md:p-8 lg:p-10 mb-12 border border-gray-100">
-          <div className="flex flex-col lg:flex-row gap-10">
+        <div className="bg-white rounded-[30px] sm:rounded-[40px] shadow-xl shadow-blue-50/50 p-5 sm:p-8 lg:p-10 mb-8 sm:mb-12 border border-gray-100">
+          <div className="flex flex-col lg:flex-row gap-8 lg:gap-10">
             
             {/* Left Column: Let's Connect */}
             <div className="lg:w-[30%] flex flex-col">
@@ -112,8 +112,8 @@ function Contact() {
               </form>
             </div>
 
-            {/* Right Column: Illustration */}
-            <div className="lg:w-[30%] bg-blue-50/50 rounded-3xl p-8 flex flex-col justify-center border border-blue-100/50 relative overflow-hidden">
+            {/* Right Column: Illustration - hidden on mobile */}
+            <div className="lg:w-[30%] hidden lg:flex bg-blue-50/50 rounded-3xl p-8 flex-col justify-center border border-blue-100/50 relative overflow-hidden">
               <div className="absolute top-0 right-0 w-32 h-32 bg-blue-100 rounded-full mix-blend-multiply filter blur-[20px] opacity-60"></div>
               
               <div className="relative w-full h-40 mb-6 flex items-center justify-center">

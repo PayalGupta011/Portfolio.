@@ -41,12 +41,12 @@ function Projects() {
     <div className="bg-white py-20 px-4 sm:px-8">
       <div className="max-w-[1200px] mx-auto">
         
-        <div className="text-center mb-16">
+        <div className="text-center mb-10 sm:mb-16">
           <span className="text-blue-500 font-bold text-sm bg-blue-50 px-3 py-1 rounded-full">My Work</span>
-          <h2 className="text-4xl md:text-5xl font-extrabold text-slate-800 mt-4 mb-4">
+          <h2 className="text-2xl sm:text-4xl md:text-5xl font-extrabold text-slate-800 mt-4 mb-4">
             Featured <span className="text-blue-500">Projects</span>
           </h2>
-          <p className="text-slate-500 text-lg">
+          <p className="text-slate-500 text-sm sm:text-lg">
             A collection of my best work that solves real-world problems.
           </p>
         </div>
